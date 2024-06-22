@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "959958630681",
+    "project_id": "computools-a8720",
+    "storage_bucket": "computools-a8720.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959958630681:android:bcf2c8379d5054c6678588",
+        "android_client_info": {
+          "package_name": "com.computools"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkpjOUuElBj-exXUPINq9qvmed49cID4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
