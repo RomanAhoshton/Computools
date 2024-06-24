@@ -22,11 +22,13 @@ export const useCreateUser = ({reset}: Props) => {
         data.password,
       );
 
-      if (user) {
-        await user.updateProfile({
-          displayName: data.name,
-        });
+      await user.updateProfile({
+        displayName: data.name,
+      });
 
+      const currentUserName = auth().currentUser?.displayName;
+
+      if (currentUserName) {
         Alert.alert(
           '',
           'Your account has been created. Do you want to Login?',
