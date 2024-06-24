@@ -5,8 +5,8 @@ import {useNavigation} from '@react-navigation/native';
 export const useLogOut = () => {
   const navigation = useNavigation();
   const LogOut = async () => {
-    await auth().signOut();
     navigation.navigate(ScreenNames.RegisterScreen as never);
+    await auth().signOut();
   };
 
   return {LogOut};

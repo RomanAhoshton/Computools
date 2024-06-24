@@ -4,7 +4,7 @@ import {colors} from '../../helpers';
 
 export default () => {
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper]}>
       <ActivityIndicator size="large" color={colors.blue} />
     </View>
   );
@@ -12,10 +12,12 @@ export default () => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    position: 'relative',
+    position: 'absolute',
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 2,
     top: '50%',
+    left: 0,
+    right: 0,
   },
 });

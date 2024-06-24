@@ -45,7 +45,6 @@ export default () => {
 
   return (
     <SafeAreaView style={styles.wrapper}>
-      {isLoading && <LoaderC />}
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}
@@ -97,12 +96,14 @@ export default () => {
               )}
               name="password"
             />
+            {isLoading && <LoaderC />}
             <View style={styles.actions}>
               <ButtonC
                 text="Log in"
                 handleSubmit={handleSubmit(onSubmit)}
                 color={colors.blue}
               />
+
               <Pressable
                 onPress={() =>
                   navigation.navigate(ScreenNames.RegisterScreen as never)

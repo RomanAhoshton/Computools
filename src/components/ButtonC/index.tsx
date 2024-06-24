@@ -1,6 +1,6 @@
 import React from 'react';
 import {Pressable, Text, StyleSheet} from 'react-native';
-import {colors, fontSizes} from '../../helpers';
+import {fontSizes} from '../../helpers';
 
 interface ButtonProps {
   text: string;
@@ -11,11 +11,9 @@ interface ButtonProps {
 export default ({text, handleSubmit, color}: ButtonProps) => {
   return (
     <Pressable
-      style={[styles.button, {borderColor: color ? color : colors.white}]}
+      style={[styles.button, {borderColor: color}]}
       onPress={handleSubmit}>
-      <Text style={[styles.textButton, {color: color ? color : colors.white}]}>
-        {text}
-      </Text>
+      <Text style={[styles.textButton, {color: color}]}>{text}</Text>
     </Pressable>
   );
 };

@@ -20,11 +20,8 @@ import ButtonC from '../../components/ButtonC';
 import TextC from '../../components/TextC';
 import {FormData} from '../../types';
 import LoaderC from '../../components/LoaderC';
-import auth from '@react-native-firebase/auth';
 
 export default () => {
-  const currentUser = auth().currentUser;
-  console.log(currentUser, 'register');
   const formRef = useRef<null | ScrollView>(null);
   const navigation = useNavigation();
 
@@ -47,7 +44,6 @@ export default () => {
   };
   return (
     <SafeAreaView style={[styles.wrapper]}>
-      {isLoading && <LoaderC />}
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}
@@ -58,7 +54,7 @@ export default () => {
               <Text style={styles.title}>Computools</Text>
               <Text style={styles.subtitle}> Test Task </Text>
             </View>
-
+            {isLoading && <LoaderC />}
             <Controller
               control={control}
               rules={{

@@ -58,7 +58,6 @@ export default ({label, value, errors, setValue, secure}: InputProps) => {
         onBlur={handleBlur}
         value={value}
         onChangeText={text => setValue(text)}
-        cursorColor={colors.white}
         secureTextEntry={secure}
         textContentType="oneTimeCode"
       />

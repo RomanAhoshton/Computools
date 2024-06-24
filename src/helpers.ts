@@ -1,5 +1,3 @@
-import {Dimensions} from 'react-native';
-
 export enum ScreenNames {
   RegisterScreen = 'RegisterScreen',
   LoginScreen = 'LoginScreen',
@@ -8,19 +6,9 @@ export enum ScreenNames {
   TopTabs = 'TopTabs',
 }
 
-const {width, height} = Dimensions.get('window');
-
-export const Metrics = {
-  width,
-  height,
-};
-
 export const colors = {
-  black: '#0e1012',
   blue: '#1daeff',
-  white: '#fff',
-  dark: '#282828',
-  grey: '#8f90a6',
+  dark: '#0e1012',
   red: '#FD0E42',
 };
 

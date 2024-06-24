@@ -11,7 +11,6 @@ export default () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        // tabBarLabelStyle: {fontSize: 12},
         tabBarItemStyle: {paddingTop: 50},
         tabBarStyle: {height: 100, backgroundColor: colors.dark},
 
@@ -28,7 +27,7 @@ export default () => {
       <Tab.Screen
         component={FeedsScreen}
         name={ScreenNames.FeedsScreen}
-        options={{tabBarLabel: 'Home'}}
+        options={{tabBarLabel: 'Feeds'}}
       />
       <Tab.Screen
         component={ProfileScreen}
